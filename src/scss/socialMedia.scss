@@ -1,0 +1,75 @@
+@import 'globals';
+
+.logo {
+	background-image: url('../images/sprites.png');
+	background-repeat: no-repeat;
+	display: inline-block;
+	height: 16px;
+}
+
+.linkedin, .git, .code, .skype {
+	.text-small {
+		vertical-align: middle;
+		display: inline-block;
+		height: 26px;
+	}
+
+	&:hover {
+		cursor: pointer;
+		.text-small {
+			color: $hover;
+		}
+	}
+}
+
+.skype {
+	&:hover {
+		.logo {
+			background-position: -55px -18px;
+		}
+	}
+
+	.logo {
+		width: 16px;
+		background-position: -55px 0px;
+	}
+}
+
+.linkedin {
+	&:hover {
+		.logo {
+			background-position: -35px -18px;
+		}
+	}
+
+	.logo {
+		width: 20px;
+		background-position: -35px 0px;
+	}
+}
+
+.git {
+	&:hover {
+		.logo {
+			background-position: -17px -18px;
+		}
+	}
+
+	.logo {
+		width: 16px;
+		background-position: -17px 0px;
+	}
+}
+
+.code {
+	&:hover {
+		.logo {
+			background-position: 0px -18px;
+		}
+	}
+
+	.logo {
+		width: 16px;
+		background-position: 0px 0px;
+	}
+}

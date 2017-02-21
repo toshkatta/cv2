@@ -1,6 +1,7 @@
 $gray: #3A393F;
 $white: #EAEBED;
 $green: #5DA66C;
+$hover: #8fc39a;
 
 $font-stack:  Helvetica, Arial, sans-serif;
 
@@ -9,6 +10,7 @@ body {
 	padding: 0;
 	font: 100% $font-stack;
 	background-color: $white;
+	color: white;
 }
 
 h2 {
@@ -17,8 +19,9 @@ h2 {
 }
 
 h3 {
-	font-size: 1.5em;
+	font-size: 1.3em;
 	font-weight: 500;
+	margin: 0;
 }
 
 hr {
@@ -26,8 +29,13 @@ hr {
 	height: 1px;
 	border: 0;
 	border-top: 1px solid $green;
-	margin: 1em 0;
+	margin: 0;
 	padding: 0;
+}
+
+a, a:hover,  a:link, a:visited{
+	text-decoration: none;
+	color: inherit;
 }
 
 .text-centered {
@@ -38,10 +46,27 @@ hr {
 	text-align: justify;
 }
 
-.uppercase {
-	text-transform: uppercase;
+.text-small {
+	font-size: 0.8em;
 }
 
 .text-wrap {
 	word-wrap: break-word;
+}
+
+.uppercase {
+	text-transform: uppercase;
+}
+
+.push-top {
+	margin-top: 10px;
+}
+
+.push-bottom {
+	margin-bottom: 10px;
+}
+
+.push-v {
+	margin-top: 10px;
+	margin-bottom: 10px;
 }

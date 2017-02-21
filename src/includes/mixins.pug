@@ -1,0 +1,15 @@
+mixin socialMedia(link, text)
+	.row
+		a(class!=attributes.class href=link target="_blank")
+			.col-sm-2
+				.logo
+			.col-sm-10
+				.text-small
+					= text
+
+mixin contact(text1, text2)
+	.row
+		.col-sm-2.text-small
+			= text1
+		.col-sm-10.text-wrap.text-small
+			= text2

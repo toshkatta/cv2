@@ -23,8 +23,8 @@ var gulp = require('gulp'),
 		cssPath: dist + '/css',
 		jsPathSrc: src + '/js',
 		jsPathDest: dist + '/js',
-		imgPathSrc: src + '/img',
-		imgPathDest: dist + '/img'
+		imgPathSrc: src + '/images',
+		imgPathDest: dist + '/images'
 	},
 	meta = {
 		banner: ['/*!',
