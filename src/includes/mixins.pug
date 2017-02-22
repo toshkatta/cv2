@@ -9,9 +9,9 @@ mixin socialMedia(link, text)
 
 mixin contact(text1, text2)
 	.row(class!=attributes.class)
-		.col-xs-1.text-smaller
-			= text1
-		.col-xs-9.text-wrap.text-small
+		.col-xs-1
+			.logo(class!=attributes.icon title!=text1)
+		.col-xs-9.text-small
 			= text2
 
 mixin education(title, description)
