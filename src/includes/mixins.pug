@@ -4,14 +4,14 @@ mixin socialMedia(link, text)
 			.col-xs-1
 				.logo(title!=attributes.class)
 			.col-xs-6
-				.text-small
+				.text-small.logo-text
 					= text
 
 mixin contact(text1, text2)
 	.row(class!=attributes.class)
-		.col-xs-2.text-small
+		.col-xs-1.text-smaller
 			= text1
-		.col-xs-10.text-wrap.text-small
+		.col-xs-9.text-wrap.text-small
 			= text2
 
 mixin education(title, description)
