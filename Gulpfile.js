@@ -104,29 +104,26 @@ gulp.task('clean', function(){
 -------------------------------------------------------------------- */
 
 gulp.task('copy', function(){
-	gulp.src([
-		config.jsPathSrc + '**/*.js',
-		config.imgPathSrc + '**/.{gif|jpg|png}'
-	])
+	gulp.src('./src/images/*')	
 	.pipe(copy())
-	.pipe(gulp.dest(dist));
+	.pipe(gulp.dest(dist + '/images/'));
 });
 
 /**********************************************************************
 4. Registered Gulp tasks
 **********************************************************************/
 
-gulp.task('build', ['clean'], function(){
+gulp.task('build', ['copy'], function(){
 	gulp.start('pug');
 	gulp.start('sass');
 	gulp.start('copy');
 });
 
 gulp.task('serve', ['build', 'browser-sync'], function(){
-	gulp.watch(dist + '/*.html').on('change', browserSync.reload);
-	gulp.watch(config.cssPath + '/*.css').on('change', browserSync.reload);
-	gulp.watch(src + '/*.pug', ['pug']).on('change', browserSync.reload);
-	gulp.watch(config.scssPath + '/**/*.scss', ['sass']).on('change', browserSync.reload);
+	gulp.watch(dist + '/*.html').on('change', browserSync.reload).on('error', (e) => { console.log(e) });
+	gulp.watch(config.cssPath + '/*.css').on('change', browserSync.reload).on('error', (e) => { console.log(e) });
+	gulp.watch(src + '/*.pug', ['pug']).on('change', browserSync.reload).on('error', (e) => { console.log(e) });
+	gulp.watch(config.scssPath + '/**/*.scss', ['sass']).on('change', browserSync.reload).on('error', (e) => { console.log(e) });
 });
 
 gulp.task('default', ['build']);
