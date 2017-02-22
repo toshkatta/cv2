@@ -2,14 +2,16 @@ extends extends/master
 include ./includes/mixins
 
 block content
+	.sidebar-background.col-md-3
 	.container-fluid
 		.row
-			aside.left.col-lg-3.col-md-3.col-sm-3.col-xs-3
+			aside.sidebar.col-md-3.col-sm-12
 				include ./includes/avatarHolder
 				.contact-container
 					include ./includes/contacts
 					include ./includes/socialMedia
 
-			article.right.col-lg-9.col-md-9.col-sm-9.col-xs-9
-				.text-centered.
-					Right side
+			article.main.col-lg-9.col-md-9.col-sm-12
+				include ./includes/work
+				include ./includes/projects
+				include ./includes/education

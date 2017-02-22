@@ -3,15 +3,83 @@
 @import 'socialMedia';
 @import 'avatarHolder';
 
-.left {
+.sidebar {
 	border-right: 1px solid black;
 	background-color: $gray;
 	color: white;
+	position: relative;
+	z-index: 20;
+	display: inline-block;
+
+	@media screen and (max-width: 992px) {
+		height: auto;
+	}
 }
 
-.contact-container {
-	// min-height: 100%;
+.sidebar-background {
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	background-color: $gray;
+
+	@media screen and (max-width: 992px) {
+		display: none;
+	}
 }
 
-.right {
+.contact-container, .image-holder {
+	padding: 20px;
+}
+
+.main {
+	color: black;
+	padding: 20px 40px;
+
+	@media screen and (max-width: 992px) {
+		padding: 0;
+	}
+}
+
+.lexImage {
+	width: 100%;
+	height: auto;
+	border: none;
+	&:hover {
+		// IE 8
+		filter:Alpha(opacity=80);
+
+		opacity: 0.8;
+	}
+}
+
+.rect {
+	width: 10px;
+	height: 10px;
+	background-color: $mainColour;
+	display: inline-block;
+	margin-bottom: 2px;
+	margin-right: 10px;
+	border-radius: 2px;
+}
+
+.company {
+	// IE 8
+	filter:Alpha(opacity=66);
+
+	opacity: 0.66;
+	margin-left: 25px;
+	font-style: italic;
+	font-weight: 400;
+}
+
+.github-link {
+	font-size: 1.1em;
+	font-weight: 600;
+	color: $mainColour;
+
+	&:hover {
+		color: $hover;
+	}
 }

@@ -1,15 +1,26 @@
 mixin socialMedia(link, text)
 	.row
 		a(class!=attributes.class href=link target="_blank")
-			.col-sm-2
-				.logo
-			.col-sm-10
+			.col-xs-1
+				.logo(title!=attributes.class)
+			.col-xs-6
 				.text-small
 					= text
 
 mixin contact(text1, text2)
-	.row
-		.col-sm-2.text-small
+	.row(class!=attributes.class)
+		.col-xs-2.text-small
 			= text1
-		.col-sm-10.text-wrap.text-small
+		.col-xs-10.text-wrap.text-small
 			= text2
+
+mixin education(title, description)
+	.row(class!=attributes.class)
+		.col-xs-12
+			li.push-v
+				.rect
+				h4.uppercase
+					= title
+	.row
+		.col-xs-12
+			= description

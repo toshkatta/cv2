@@ -1,9 +1,12 @@
-$gray: #3A393F;
-$white: #EAEBED;
-$green: #5DA66C;
-$hover: #8fc39a;
+$gray: #1C1C1F;
+$white: #EAF2EF;
+$mainColour: #1D7874;
+$hover: #48a29e;
+$font-stack:  Segoe UI, Helvetica, Arial, sans-serif;
 
-$font-stack:  Helvetica, Arial, sans-serif;
+html, body {
+	height: 100%;
+}
 
 body {
 	margin: 0;
@@ -19,23 +22,32 @@ h2 {
 }
 
 h3 {
-	font-size: 1.3em;
-	font-weight: 500;
+	font-size: 1.44em;
+	font-weight: 600;
 	margin: 0;
+}
+
+h4 {
+	font-size: 1.2em;
+	font-weight: 500;
+	display: inline;
 }
 
 hr {
 	display: block;
 	height: 1px;
 	border: 0;
-	border-top: 1px solid $green;
+	border-top: 1px solid $mainColour;
 	margin: 0;
 	padding: 0;
 }
 
 a, a:hover,  a:link, a:visited{
 	text-decoration: none;
-	color: inherit;
+}
+
+strong {
+	font-weight: 700;
 }
 
 .text-centered {
@@ -62,11 +74,24 @@ a, a:hover,  a:link, a:visited{
 	margin-top: 10px;
 }
 
+.push-top-more {
+	margin-top: 20px;
+}
+
 .push-bottom {
 	margin-bottom: 10px;
+}
+
+.push-bottom-more {
+	margin-bottom: 20px;
 }
 
 .push-v {
 	margin-top: 10px;
 	margin-bottom: 10px;
+}
+
+.push-v-more {
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
