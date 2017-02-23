@@ -42,7 +42,7 @@
 	}
 }
 
-.lexImage {
+.portfolio-image {
 	width: 100%;
 	height: auto;
 	border: none;
@@ -92,4 +92,12 @@
 .email {
 	background-position: -89.5px 0px;
     width: 16px;
+}
+
+footer {
+	background-color: $mainColour;
+	color: white;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	z-index: 20;
 }
