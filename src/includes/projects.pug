@@ -1,36 +1,66 @@
 .row.push-top-more
-	.col-xs-12
-		.text-container
-			h3.uppercase.push-v.
-				Personal projects
+    .col-xs-12
+        .text-container
+            h3.uppercase.push-v.
+                Personal projects
 hr.push-bottom
 ul
-	.row
-		.col-xs-12
-			li.push-v
-				.rect
-				h4.uppercase.
-					This CV
-	.row
-		.col-xs-12.
-			I wanted to learn more about <strong>Jade/Pug</strong>, <strong>SASS</strong> and <strong>responsive design</strong> and I felt like my CV needed a redesign.
-	.row
-		.col-xs-12
-			a.github-link(href="https://github.com/toshkatta/cv2" target="_blank") github
+    .row
+        .col-xs-12
+            li.push-v
+                .rect
+                h4.uppercase.
+                    Recipe Book
+    .row
+        .col-xs-12
+            p.
+                I decided that I need to learn more about <strong>Angular</strong> and <strong>PostgesSQL</strong> so I found a basic tutorial online and decided to expand on it. This project has a basic CRUD functionality, pagination and sorting.
+            br
+            p.
+                There are 5 pages: home, page not found, recipes, drinks and a page for viewing a single recipe.
+            br
+            p.
+                At the recipes page there is a paginated list of recipes with previous/next functionality. Next there is the add recipe button which opens a modal with inputs for all the necessary fields for creating a recipe and a close and save buttons. Each input has an empty check validation and displays an error message if it's empty. Also the save button can't be clicked if there are errors. Next to each recipe in the list there is a triangular button which opens up a dropdown with the recipe's details and the edit, delete and view buttons. The edit button opens up a modal similar to the create recipe modal with the recipe's properties already entered into the inputs and ready for changes. The empty checks and error messages are still there. The delete button opens up a confirm modal. The view button displays the selected recipe on its own page. Whenever a recipe is added, deleted or modified the page is automatically refreshed.
+            br
+            p.
+                At the drinks page there is a list of all of the drinks in the DB displayed in a table. The drinks can be sorted by clicking on each of the fields in the table head. There is also the search input, which can be used to filter the list of drinks to display only the drinks, which contain the value of the input in one or more of its text properties.
+            br
+            p.
+                Most of the styling is done by using <strong>Bootsrap</strong> and a bootswatch theme because it was not the main focus.
+            br
+    .row
+        .col-xs-12
+            a.github-link(href="https://github.com/toshkatta/recipebook" target="_blank") github
+    .row.push-v
+        .col-xs-12
+            a(href="https://github.com/toshkatta/recipebook" target="_blank")
+                img.portfolio-image(src="./images/rb.jpg")
+    .row.push-top-more
+        .col-xs-12
+            li.push-v
+                .rect
+                h4.uppercase.
+                    This CV
+    .row
+        .col-xs-12.
+            I wanted to learn more about <strong>Jade/Pug</strong>, <strong>SASS</strong> and <strong>responsive design</strong> and I felt like my CV needed a redesign.
+    .row
+        .col-xs-12
+            a.github-link(href="https://github.com/toshkatta/cv2" target="_blank") github
 
-	.row.push-top-more
-		.col-xs-12
-			li.push-v
-				.rect
-				h4.uppercase.
-					Gallery
-	.row
-		.col-xs-12.
-			A simple <strong>MEAN</strong> stack gallery I did for an interview. It was my first try at full stack development.
-	.row
-		.col-xs-12
-			a.github-link(href="https://github.com/toshkatta/Gallery-1.1" target="_blank") github
-	.row.push-v
-		.col-xs-12
-			a(href="https://github.com/toshkatta/Gallery-1.1" target="_blank")
-				img.portfolio-image(src="./images/gallery.jpg")
+    .row.push-top-more
+        .col-xs-12
+            li.push-v
+                .rect
+                h4.uppercase.
+                    Gallery
+    .row
+        .col-xs-12.
+            A simple <strong>MEAN</strong> stack gallery I did for an interview. It was my first try at full stack development.
+    .row
+        .col-xs-12
+            a.github-link(href="https://github.com/toshkatta/Gallery-1.1" target="_blank") github
+    .row.push-v
+        .col-xs-12
+            a(href="https://github.com/toshkatta/Gallery-1.1" target="_blank")
+                img.portfolio-image(src="./images/gallery.jpg")
