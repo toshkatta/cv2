@@ -1,6 +1,6 @@
 $gray: #1C1C1F;
-$white: #EAF2EF;
-$mainColour: #1D7874;
+$white: #F4F4F4;
+$mainColour: #007849;
 $hover: #48a29e;
 $font-stack:  Segoe UI, Helvetica, Arial, sans-serif;
 
@@ -16,20 +16,15 @@ body {
 	color: white;
 }
 
-h2 {
-	font-size: 2.3em;
-	font-weight: 700;
+.main-colour {
+	color: $mainColour;
 }
 
 h3 {
-	font-size: 1.44em;
-	font-weight: 600;
 	margin: 0;
 }
 
 h4 {
-	font-size: 1.2em;
-	font-weight: 500;
 	display: inline;
 }
 
@@ -42,16 +37,8 @@ hr {
 	padding: 0;
 }
 
-a, a:hover,  a:link, a:visited{
-	text-decoration: none;
-}
-
 strong {
 	font-weight: 700;
-}
-
-.text-centered {
-	text-align: center;
 }
 
 .text-justified {
@@ -74,28 +61,7 @@ strong {
 	text-transform: uppercase;
 }
 
-.push-top {
-	margin-top: 10px;
-}
-
-.push-top-more {
-	margin-top: 20px;
-}
-
-.push-bottom {
-	margin-bottom: 10px;
-}
-
-.push-bottom-more {
-	margin-bottom: 20px;
-}
-
-.push-v {
-	margin-top: 10px;
-	margin-bottom: 10px;
-}
-
-.push-v-more {
-	margin-top: 20px;
-	margin-bottom: 20px;
+.center-v {
+	display: flex;
+	align-items: center;
 }

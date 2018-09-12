@@ -2,6 +2,7 @@
 @import 'globals';
 @import 'socialMedia';
 @import 'avatarHolder';
+@import 'projects';
 
 .sidebar {
 	border-right: 1px solid black;
@@ -9,6 +10,7 @@
 	color: white;
 	z-index: 20;
 	display: inline-block;
+	padding: 0;
 
     @media screen and (min-width: 992px) {
         position: fixed;
@@ -50,18 +52,6 @@
 	}
 }
 
-.portfolio-image {
-	width: 100%;
-	height: auto;
-	border: none;
-	&:hover {
-		// IE 8
-		filter:Alpha(opacity=80);
-
-		opacity: 0.8;
-	}
-}
-
 .rect {
 	width: 10px;
 	height: 10px;
@@ -90,16 +80,6 @@
 	&:hover {
 		color: $hover;
 	}
-}
-
-.phone {
-	background-position: -72.5px 0px;
-    width: 16px;
-}
-
-.email {
-	background-position: -89.5px 0px;
-    width: 16px;
 }
 
 footer {

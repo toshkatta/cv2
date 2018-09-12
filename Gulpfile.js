@@ -8,21 +8,14 @@
 
 var gulp = require('gulp'),
 	browserSync = require('browser-sync').create(),
-	$ = require('gulp-load-plugins')(),
 	pug = require('gulp-pug'),
-	gulp_watch_pug = require('gulp-watch-pug'),
-	clean = require('gulp-contrib-clean'),
-	copy = require('gulp-contrib-copy'),
-	pkg = require('./package.json'),
-	reload = browserSync.reload,
-	src = './src'
+	sass = require('gulp-sass'),
+	src = './src',
 	dist = './dist',
 	config = {
 		htmlPath: dist,
 		scssPath: src + '/scss',
 		cssPath: dist + '/css',
-		jsPathSrc: src + '/js',
-		jsPathDest: dist + '/js',
 		imgPathSrc: src + '/images',
 		imgPathDest: dist + '/images'
 	},
@@ -34,7 +27,7 @@ var gulp = require('gulp'),
 			' * Date: ' + formatDate(),
 			' */',
 			'',
-		''].join('\n')
+			''].join('\n')
 	};
 
 /**********************************************************************
@@ -59,10 +52,9 @@ function formatDate() {
 /* Sass compile with sourcemap
 -------------------------------------------------------------------- */
 
-gulp.task('sass', function(){
+gulp.task('sass', function () {
 	return gulp.src(config.scssPath + '/**/*.scss')
-		.pipe($.newer(config.cssPath + '/css'))
-		.pipe($.sass({
+		.pipe(sass({
 			style: 'extended',
 			sourcemap: false,
 			errLogToConsole: true
@@ -75,7 +67,7 @@ gulp.task('sass', function(){
 -------------------------------------------------------------------- */
 
 gulp.task('pug', function buildHTML() {
-	return gulp.src(src + '/*.pug')
+	return gulp.src(src + '/index.pug')
 		.pipe(pug({
 			pretty: true
 		}))
@@ -85,7 +77,7 @@ gulp.task('pug', function buildHTML() {
 /* Run a proxy server
 -------------------------------------------------------------------- */
 
-gulp.task('browser-sync', function() {
+gulp.task('browser-sync', function () {
 	browserSync.init({
 		server: {
 			baseDir: dist
@@ -93,37 +85,24 @@ gulp.task('browser-sync', function() {
 	});
 });
 
-/* Cleanup the Sass generated --sourcemap *.map.css files
--------------------------------------------------------------------- */
-
-gulp.task('clean', function(){
-	gulp.src([dist], {read: false}).pipe(clean());
-});
-
-/* Copy
--------------------------------------------------------------------- */
-
-gulp.task('copy', function(){
-	gulp.src('./src/images/*')	
-	.pipe(copy())
-	.pipe(gulp.dest(dist + '/images/'));
-});
-
 /**********************************************************************
 4. Registered Gulp tasks
 **********************************************************************/
 
-gulp.task('build', ['copy'], function(){
+gulp.task('build', function () {
 	gulp.start('pug');
 	gulp.start('sass');
-	gulp.start('copy');
 });
 
-gulp.task('serve', ['build', 'browser-sync'], function(){
-	gulp.watch(dist + '/*.html').on('change', browserSync.reload).on('error', (e) => { console.log(e) });
-	gulp.watch(config.cssPath + '/*.css').on('change', browserSync.reload).on('error', (e) => { console.log(e) });
-	gulp.watch(src + '/*.pug', ['pug']).on('change', browserSync.reload).on('error', (e) => { console.log(e) });
-	gulp.watch(config.scssPath + '/**/*.scss', ['sass']).on('change', browserSync.reload).on('error', (e) => { console.log(e) });
+gulp.task('serve', ['build', 'browser-sync'], function () {
+	gulp.watch(src + '/**/*.pug', ['pug']).on('change', browserSync.reload).on('error', (e) => {
+		console.log(e)
+		ths.emit('end')
+	});
+	gulp.watch(config.scssPath + '/**/*.scss', ['sass']).on('change', browserSync.reload).on('error', (e) => {
+		console.log(e)
+		ths.emit('end')
+	});
 });
 
 gulp.task('default', ['build']);

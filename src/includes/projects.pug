@@ -1,18 +1,42 @@
-.row.push-top-more
-    .col-xs-12
+.row.mt-4
+    .col-md-12
         .text-container
-            h3.uppercase.push-v.
+            h3.uppercase.my-2.
                 Personal projects
-hr.push-bottom
+hr.mb-2
 ul
     .row
-        .col-xs-12
-            li.push-v
+        .col-md-12
+            li.my-2
+                .rect
+                h4.uppercase.
+                    Demo app - WIP
+    .row
+        .col-md-12
+            p.
+                I wanted to learn more about full stack web development so I started working on this app. I want it to list items which users can browse, add to collections, post comments and replies, search for specific item by name or some other property, sort and so on. Users and items will have pictures which will be stored on the server. There will be pages which only logged in users can access. So far I have completed the register/login/logout, edit profile and image upload processes and I am working on implementing the rest. I added validations to each of the fields on the register page both at the FE and the BE. As the user is typing in the name and email fields I am sending requests to the BE to check if given username/email is already taken to notify the user. Passwords are hashed when the user is created or the password is updated. Uploaded images are resized and saved in the public folder, matched by the user's id and are accessable by the FE. I added an auth guard which prevents logged in users from accessing the register/login pages and non registered users from accessing the profile page.
+    .row
+        .col-md-12
+            a.github-link(href="https://github.com/toshkatta/demoApp" target="_blank") FE github
+    .row
+        .col-md-12
+            a.github-link(href="https://github.com/toshkatta/demoAppApi" target="_blank") BE github
+    .row.my-2
+        a.col-md-4.portfolio-image.pi-1(href="./images/da1.jpg" target="_blank")
+        a.col-md-4.portfolio-image.pi-2(href="/images/da2.jpg" target="_blank")
+        a.col-md-4.portfolio-image.pi-3(href="/images/da3.jpg" target="_blank")
+    .row.my-2
+        a.col-md-4.portfolio-image.pi-4(href="./images/da4.jpg" target="_blank")
+        a.col-md-4.portfolio-image.pi-5(href="/images/da5.jpg" target="_blank")
+        a.col-md-4.portfolio-image.pi-6(href="/images/da6.jpg" target="_blank")
+    .row.mt-3
+        .col-md-12
+            li.my-2
                 .rect
                 h4.uppercase.
                     Recipe Book
     .row
-        .col-xs-12
+        .col-md-12
             p.
                 I decided that I need to learn more about <strong>Angular</strong> and <strong>PostgesSQL</strong> so I found a basic tutorial online and decided to expand on it. This project has a basic CRUD functionality, pagination and sorting.
             br
@@ -29,38 +53,41 @@ ul
                 Most of the styling is done by using <strong>Bootsrap</strong> and a bootswatch theme because it was not the main focus.
             br
     .row
-        .col-xs-12
+        .col-md-12
             a.github-link(href="https://github.com/toshkatta/recipebook" target="_blank") github
-    .row.push-v
-        .col-xs-12
+    .row.my-2
+        .col-md-12
             a(href="https://github.com/toshkatta/recipebook" target="_blank")
                 img.portfolio-image(src="./images/rb.jpg")
-    .row.push-top-more
-        .col-xs-12
-            li.push-v
+    .row.mt-4
+        .col-md-12
+            li.my-2
                 .rect
                 h4.uppercase.
                     This CV
     .row
-        .col-xs-12.
+        .col-md-12.
             I wanted to learn more about <strong>Jade/Pug</strong>, <strong>SASS</strong> and <strong>responsive design</strong> and I felt like my CV needed a redesign.
+    .row.my-2
+        .col-md-12
+            a.github-link(href="https://cvta.herokuapp.com/" target="_blank") This is my old CV for reference.
     .row
-        .col-xs-12
+        .col-md-12
             a.github-link(href="https://github.com/toshkatta/cv2" target="_blank") github
 
-    .row.push-top-more
-        .col-xs-12
-            li.push-v
+    .row.mt-4
+        .col-md-12
+            li.my-2
                 .rect
                 h4.uppercase.
                     Gallery
     .row
-        .col-xs-12.
+        .col-md-12.
             A simple <strong>MEAN</strong> stack gallery I did for an interview. It was my first try at full stack development.
     .row
-        .col-xs-12
+        .col-md-12
             a.github-link(href="https://github.com/toshkatta/Gallery-1.1" target="_blank") github
-    .row.push-v
-        .col-xs-12
+    .row.my-2
+        .col-md-12
             a(href="https://github.com/toshkatta/Gallery-1.1" target="_blank")
                 img.portfolio-image(src="./images/gallery.jpg")

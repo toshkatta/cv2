@@ -5,17 +5,9 @@
   "version": "1.0.0",
   "main": "Gulpfile.js",
   "devDependencies": {
-    "browser-sync": "^2.2.1",
-    "gulp": "^3.8.11",
-    "gulp-contrib-clean": "^0.0.2",
-    "gulp-contrib-copy": "^0.1.2",
-    "gulp-header": "^1.8.8",
-    "gulp-load-plugins": "^1.4.0",
-    "gulp-newer": "^1.1.0",
-    "gulp-pug": "^3.2.0",
-    "gulp-sass": "^3.0.0",
-    "gulp-watch-pug": "^1.0.0",
-    "jstransformer-escape-html": "^1.0.0",
-    "jstransformer-markdown-it": "^2.0.0"
+    "browser-sync": "^2.24.7",
+    "gulp": "^3.9.1",
+    "gulp-pug": "^4.0.1",
+    "gulp-sass": "^4.0.1"
   }
 }

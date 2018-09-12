@@ -1,0 +1,24 @@
+.portfolio-image {
+	width: 100%;
+	height: auto;
+	border: none;
+	&:hover {
+		// IE 8
+		filter:Alpha(opacity=80);
+
+		opacity: 0.8;
+    }
+}
+
+@for $i from 1 through 6 {
+    .pi-#{$i} {
+        background-image: url('/images/da#{$i}.jpg');
+
+        margin-right: -15px;
+        margin-left: -15px;
+        padding-bottom: 42%;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}

@@ -1,26 +1,24 @@
-mixin socialMedia(link, text)
-	.row
-		a(class!=attributes.class href=link target="_blank")
-			.col-xs-1
-				.logo(title!=attributes.class)
-			.col-xs-6
-				.text-small.logo-text
-					= text
+mixin socialMedia(link, hoverClass)
+	.row.my-3
+		a.col.sm-12.center-v.link(href=link target="_blank", class!=hoverClass)
+			.contact(class!=attributes.icon)
+			.ml-3.
+				@toshkatta
 
 mixin contact(text1, text2)
-	.row(class!=attributes.class)
-		.col-xs-1
-			.logo(class!=attributes.icon title!=text1)
-		.col-xs-9.text-small
-			= text2
+	.row.my-3
+		.col.sm-12.center-v
+			.contact(class!=attributes.icon)
+			span.ml-2
+				= text2
 
 mixin education(title, description)
 	.row(class!=attributes.class)
-		.col-xs-12
-			li.push-v
+		.col-sm-12
+			li.my-2
 				.rect
 				h4.uppercase
 					= title
 	.row
-		.col-xs-12
+		.col-sm-12
 			= description
