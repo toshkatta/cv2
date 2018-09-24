@@ -14,7 +14,7 @@ ul
     .row
         .col-md-12
             p.
-                I wanted to learn more about full stack web development so I started working on this app. I want it to list items which users can browse, add to collections, post comments and replies, search for specific item by name or some other property, sort and so on. Users and items will have pictures which will be stored on the server. There will be pages which only logged in users can access. So far I have completed the register/login/logout, edit profile and image upload processes and I am working on implementing the rest. I added validations to each of the fields on the register page both at the FE and the BE. As the user is typing in the name and email fields I am sending requests to the BE to check if given username/email is already taken to notify the user. Passwords are hashed when the user is created or the password is updated. Uploaded images are resized and saved in the public folder, matched by the user's id and are accessable by the FE. I added an auth guard which prevents logged in users from accessing the register/login pages and non registered users from accessing the profile page.
+                I wanted to learn more about full stack web development so I started working on this app. I want it to list items which users can browse, add to collections, post comments and replies, search for specific item by name or some other property, sort and so on. Users and items will have pictures which will be stored on the server. There will be pages which only logged in users can access. So far I have completed the register/login/logout, edit profile and image upload processes, displaying a list of sneakers on the home page, creating and viewing a single sneaker and I am working on implementing the rest: add comments and replies, add pagination and implement the search functionality. I added validations to each of the fields on the register page both at the FE and the BE. As the user is typing in the name and email fields I am sending requests to the BE to check if given username/email is already taken to notify the user. Passwords are hashed when the user is created or the password is updated. Uploaded images are resized and saved in the public folder, matched by the user's id and are accessable by the FE. I added an auth guard which prevents logged in users from accessing the register/login pages and non registered users from accessing the profile page.
     .row
         .col-md-12
             a.github-link(href="https://github.com/toshkatta/demoApp" target="_blank") FE github
@@ -22,13 +22,35 @@ ul
         .col-md-12
             a.github-link(href="https://github.com/toshkatta/demoAppApi" target="_blank") BE github
     .row.my-2
-        a.col-md-4.portfolio-image.pi-1(href="./images/da1.jpg" target="_blank")
-        a.col-md-4.portfolio-image.pi-2(href="/images/da2.jpg" target="_blank")
-        a.col-md-4.portfolio-image.pi-3(href="/images/da3.jpg" target="_blank")
+        .col-md-4.col-sm-6.col-12
+            a(href="./images/da1.jpg" target="_blank")
+                img.portfolio-image(src="/images/da1.jpg")
+        .col-md-4.col-sm-6.col-12
+            a(href="./images/da2.jpg" target="_blank")
+                img.portfolio-image(src="/images/da2.jpg")
+        .col-md-4.col-sm-6.col-12
+            a(href="./images/da3.jpg" target="_blank")
+                img.portfolio-image(src="/images/da3.jpg")
     .row.my-2
-        a.col-md-4.portfolio-image.pi-4(href="./images/da4.jpg" target="_blank")
-        a.col-md-4.portfolio-image.pi-5(href="/images/da5.jpg" target="_blank")
-        a.col-md-4.portfolio-image.pi-6(href="/images/da6.jpg" target="_blank")
+        .col-md-4.col-sm-6.col-12
+            a(href="./images/da4.jpg" target="_blank")
+                img.portfolio-image(src="/images/da4.jpg")
+        .col-md-4.col-sm-6.col-12
+            a(href="./images/da5.jpg" target="_blank")
+                img.portfolio-image(src="/images/da5.jpg")
+        .col-md-4.col-sm-6.col-12
+            a(href="./images/da6.jpg" target="_blank")
+                img.portfolio-image(src="/images/da6.jpg")
+    .row.my-2
+        .col-md-4.col-sm-6.col-12
+            a(href="./images/da7.jpg" target="_blank")
+                img.portfolio-image(src="/images/da7.jpg")
+        .col-md-4.col-sm-6.col-12
+            a(href="./images/da8.jpg" target="_blank")
+                img.portfolio-image(src="/images/da8.jpg")
+        .col-md-4.col-sm-6.col-12
+            a(href="./images/da9.jpg" target="_blank")
+                img.portfolio-image(src="/images/da9.jpg")
     .row.mt-3
         .col-md-12
             li.my-2
