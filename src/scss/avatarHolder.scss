@@ -9,14 +9,14 @@
 }
 
 .avatar-holder {
-	border: 2px solid black;
-	margin: 10px 0;
 	width: fit-content;
+	display: table;
 }
 
 .avatar {
 	width: auto;
 	height: 300px;
+	vertical-align: middle;
 }
 
 .description {
